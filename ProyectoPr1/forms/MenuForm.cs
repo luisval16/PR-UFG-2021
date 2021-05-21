@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using ProyectoPr1.model;
 
 namespace ProyectoPr1.forms
 {
@@ -12,12 +13,28 @@ namespace ProyectoPr1.forms
     {
 
 
+        private List<Empleado> empleados = new List<Empleado>();
+
+
+        
+
 
 
         public MenuForm()
         {
             InitializeComponent();
             
+        }
+
+
+        public void addEmpleado(Empleado empleado)
+        {
+            this.empleados.Add(empleado);
+        }
+
+        public List<Empleado> GetEmpleados()
+        {
+            return this.empleados;
         }
 
         public void setUsername(String username)

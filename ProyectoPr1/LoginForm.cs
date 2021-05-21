@@ -7,25 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoPr1.model;
 
 namespace ProyectoPr1
 {
     public partial class LoginForm : Form
     {
 
-        private String username = "admin";
-        private String password = "admin123";
+        private String username = "";
+        private String password = "";
+
+        private Empleado currentUser;
+        private List<Empleado> empleados;
 
         public LoginForm()
         {
             InitializeComponent();
             this.txtEmail.Text = username;
             this.txtPassword.Text = password;
+            currentUser = new Empleado();
+            currentUser.Nombre = "Administrador";
+            currentUser.Username = "admin";
+            currentUser.Password = "admin123";
+            
+        }
+
+        public void setEmpleados(List<Empleado> empleados)
+        {
+            this.empleados = empleados;
         }
 
         public String getUsername()
         {
             return this.username;
+        }
+
+        public Empleado getCurrentUser() {
+            return this.currentUser;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,9 +58,10 @@ namespace ProyectoPr1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (this.txtEmail.Text == username && this.txtPassword.Text == password)
+            currentUser = validarUsuario();
+            if (currentUser != null)
             {
+                limpiar();
                 this.Close();
                 DialogResult = DialogResult.OK;
             }
@@ -53,6 +72,30 @@ namespace ProyectoPr1
 
 
             
+        }
+
+
+        private Empleado validarUsuario()
+        {
+            username = this.txtEmail.Text ;
+            password = this.txtPassword.Text ;
+            foreach (Empleado empleado in empleados)
+            {
+                if (username == empleado.Username && password == empleado.Password)
+                {
+                    return empleado;
+                }
+            }
+
+            return null;
+        }
+
+
+        private void limpiar()
+        {
+            this.lblError.Visible = false;
+            this.txtEmail.Text = "";
+            this.txtPassword.Text = "";
         }
     }
 }

@@ -24,17 +24,21 @@ namespace ProyectoPr1
             MenuForm menu = new MenuForm();
             //Declaramos e inicializamos variable resultado que nos servirá como bandera para el bucle
             DialogResult resultado = DialogResult.Cancel;
+            //Agrega usuario admin a la lista de empleados del menu
+            menu.addEmpleado(loginForm.getCurrentUser());
             do
             {
                 //Cada vez que inicia un nuevo ciclo, el resultado debe volver a su valor original
                 resultado = DialogResult.Cancel;
+                //Resfresca el listado de empleados en el login para validar
+                loginForm.setEmpleados(menu.GetEmpleados());
                 //Si inicia sesión exitosamente el resultado del dialogo será OK
                 DialogResult resultadoLogin = loginForm.ShowDialog();
                 if(resultadoLogin == DialogResult.OK)
                 {
                     //Si el resultado es Ok entonces mostramos menu principal
                     // Asignamos el usuario que acaba de iniciar sesión
-                    menu.setUsername(loginForm.getUsername());
+                    menu.setUsername(loginForm.getCurrentUser().Nombre);
                     //Si el resultado del menu es Cancel salimos del aplicativo
                     //Si el resultado es No entonces significa que el usuario cerró sesión
                     //Si cerró sesión debemos mostrar el menú nuevamente
