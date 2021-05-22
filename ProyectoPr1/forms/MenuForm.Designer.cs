@@ -33,6 +33,7 @@ namespace ProyectoPr1.forms
             this.button1 = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // pContainer
@@ -50,7 +51,7 @@ namespace ProyectoPr1.forms
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -83,7 +84,7 @@ namespace ProyectoPr1.forms
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pContainer);
             this.Name = "MenuForm";
-            this.Text = "frmMenu";
+            this.Text = "Menú Principal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,5 +96,6 @@ namespace ProyectoPr1.forms
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
