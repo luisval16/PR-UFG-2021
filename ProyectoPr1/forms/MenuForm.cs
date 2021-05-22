@@ -39,12 +39,13 @@ namespace ProyectoPr1.forms
 
         public void setUsername(String username)
         {
-            this.lblUsername.Text = username;
+            
+            this.tspUsername.Text = username;
         }
 
         public String getUsername()
         {
-            return this.lblUsername.Text;
+            return this.tspUsername.Text;
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -63,6 +64,18 @@ namespace ProyectoPr1.forms
         {
             this.Close();
             DialogResult =  DialogResult.No;
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            MostrarEmpleadosForm mostrarEmpleadosForm = new MostrarEmpleadosForm(this) { TopLevel = false, TopMost = true };
+            this.pContainer.Controls.Add(mostrarEmpleadosForm);
+            mostrarEmpleadosForm.Show();
+        }
+
+        private void mainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

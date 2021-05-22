@@ -118,7 +118,9 @@ namespace ProyectoPr1
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
