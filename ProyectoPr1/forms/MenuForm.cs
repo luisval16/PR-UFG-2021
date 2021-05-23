@@ -26,13 +26,17 @@ namespace ProyectoPr1.forms
             
         }
 
+        public void setEmpleados(List<Empleado> empleados)
+        {
+            this.empleados = empleados;
+        }
 
         public void addEmpleado(Empleado empleado)
         {
             this.empleados.Add(empleado);
         }
 
-        public List<Empleado> GetEmpleados()
+        public List<Empleado> getEmpleados()
         {
             return this.empleados;
         }

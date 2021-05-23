@@ -41,13 +41,14 @@ namespace ProyectoPr1.forms
             this.dgvEmpleados.AllowUserToDeleteRows = false;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmpleados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvEmpleados.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgvEmpleados.Location = new System.Drawing.Point(0, 24);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.RowTemplate.Height = 25;
             this.dgvEmpleados.Size = new System.Drawing.Size(800, 426);
             this.dgvEmpleados.TabIndex = 0;
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvEmpleados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellValueChanged);
             // 
             // menuStrip1
             // 
@@ -65,6 +66,7 @@ namespace ProyectoPr1.forms
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar Empleado";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // MostrarEmpleadosForm
             // 
@@ -77,6 +79,7 @@ namespace ProyectoPr1.forms
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MostrarEmpleadosForm";
             this.Text = "Lista de Empleados";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

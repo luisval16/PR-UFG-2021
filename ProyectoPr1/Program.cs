@@ -31,7 +31,7 @@ namespace ProyectoPr1
                 //Cada vez que inicia un nuevo ciclo, el resultado debe volver a su valor original
                 resultado = DialogResult.Cancel;
                 //Resfresca el listado de empleados en el login para validar
-                loginForm.setEmpleados(menu.GetEmpleados());
+                loginForm.setEmpleados(menu.getEmpleados());
                 //Si inicia sesión exitosamente el resultado del dialogo será OK
                 DialogResult resultadoLogin = loginForm.ShowDialog();
                 if(resultadoLogin == DialogResult.OK)

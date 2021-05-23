@@ -33,6 +33,7 @@ namespace ProyectoPr1
             this.txtPassword.Text = password;
             //Inicializamos el usuario Administrador
             currentUser = new Empleado();
+            currentUser.Id = "1";
             currentUser.Nombre = "Administrador";
             currentUser.Username = "admin";
             currentUser.Password = "admin123";
