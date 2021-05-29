@@ -34,23 +34,28 @@ namespace ProyectoPr1.forms
             this.labelApellido = new System.Windows.Forms.Label();
             this.labelEdad = new System.Windows.Forms.Label();
             this.labelCargo = new System.Windows.Forms.Label();
-            this.labelPermanencia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxApellido = new System.Windows.Forms.TextBox();
+            this.textBoxCargo = new System.Windows.Forms.TextBox();
+            this.textBoxEdad = new System.Windows.Forms.TextBox();
             this.groupBoxGenero = new System.Windows.Forms.GroupBox();
             this.radioButtonFemenino = new System.Windows.Forms.RadioButton();
             this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.labelID = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.groupBoxGenero.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(27, 25);
+            this.labelNombre.Location = new System.Drawing.Point(27, 55);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(51, 15);
             this.labelNombre.TabIndex = 0;
@@ -59,7 +64,7 @@ namespace ProyectoPr1.forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(45, 255);
+            this.button1.Location = new System.Drawing.Point(45, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(227, 31);
             this.button1.TabIndex = 1;
@@ -70,7 +75,7 @@ namespace ProyectoPr1.forms
             // labelApellido
             // 
             this.labelApellido.AutoSize = true;
-            this.labelApellido.Location = new System.Drawing.Point(27, 54);
+            this.labelApellido.Location = new System.Drawing.Point(27, 84);
             this.labelApellido.Name = "labelApellido";
             this.labelApellido.Size = new System.Drawing.Size(51, 15);
             this.labelApellido.TabIndex = 2;
@@ -80,7 +85,7 @@ namespace ProyectoPr1.forms
             // labelEdad
             // 
             this.labelEdad.AutoSize = true;
-            this.labelEdad.Location = new System.Drawing.Point(27, 112);
+            this.labelEdad.Location = new System.Drawing.Point(27, 142);
             this.labelEdad.Name = "labelEdad";
             this.labelEdad.Size = new System.Drawing.Size(33, 15);
             this.labelEdad.TabIndex = 3;
@@ -90,58 +95,48 @@ namespace ProyectoPr1.forms
             // labelCargo
             // 
             this.labelCargo.AutoSize = true;
-            this.labelCargo.Location = new System.Drawing.Point(27, 83);
+            this.labelCargo.Location = new System.Drawing.Point(27, 113);
             this.labelCargo.Name = "labelCargo";
             this.labelCargo.Size = new System.Drawing.Size(39, 15);
             this.labelCargo.TabIndex = 4;
             this.labelCargo.Text = "Cargo";
             this.labelCargo.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // labelPermanencia
+            // textBoxNombre
             // 
-            this.labelPermanencia.AutoSize = true;
-            this.labelPermanencia.Location = new System.Drawing.Point(184, 149);
-            this.labelPermanencia.Name = "labelPermanencia";
-            this.labelPermanencia.Size = new System.Drawing.Size(112, 15);
-            this.labelPermanencia.TabIndex = 5;
-            this.labelPermanencia.Text = "Permanencia (años)";
-            this.labelPermanencia.Click += new System.EventHandler(this.label1_Click_2);
+            this.textBoxNombre.Location = new System.Drawing.Point(119, 52);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(187, 23);
+            this.textBoxNombre.TabIndex = 6;
             // 
-            // textBox1
+            // textBoxApellido
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 23);
-            this.textBox1.TabIndex = 6;
+            this.textBoxApellido.Location = new System.Drawing.Point(119, 81);
+            this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.Size = new System.Drawing.Size(187, 23);
+            this.textBoxApellido.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxCargo
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 23);
-            this.textBox2.TabIndex = 7;
+            this.textBoxCargo.Location = new System.Drawing.Point(119, 110);
+            this.textBoxCargo.Name = "textBoxCargo";
+            this.textBoxCargo.Size = new System.Drawing.Size(187, 23);
+            this.textBoxCargo.TabIndex = 8;
             // 
-            // textBox3
+            // textBoxEdad
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 23);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(119, 109);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 23);
-            this.textBox4.TabIndex = 9;
+            this.textBoxEdad.Location = new System.Drawing.Point(119, 139);
+            this.textBoxEdad.Name = "textBoxEdad";
+            this.textBoxEdad.Size = new System.Drawing.Size(187, 23);
+            this.textBoxEdad.TabIndex = 9;
             // 
             // groupBoxGenero
             // 
             this.groupBoxGenero.Controls.Add(this.radioButtonFemenino);
             this.groupBoxGenero.Controls.Add(this.radioButtonMasculino);
-            this.groupBoxGenero.Location = new System.Drawing.Point(27, 149);
+            this.groupBoxGenero.Location = new System.Drawing.Point(27, 179);
             this.groupBoxGenero.Name = "groupBoxGenero";
-            this.groupBoxGenero.Size = new System.Drawing.Size(119, 82);
+            this.groupBoxGenero.Size = new System.Drawing.Size(95, 106);
             this.groupBoxGenero.TabIndex = 10;
             this.groupBoxGenero.TabStop = false;
             this.groupBoxGenero.Text = "Género";
@@ -149,7 +144,7 @@ namespace ProyectoPr1.forms
             // radioButtonFemenino
             // 
             this.radioButtonFemenino.AutoSize = true;
-            this.radioButtonFemenino.Location = new System.Drawing.Point(7, 49);
+            this.radioButtonFemenino.Location = new System.Drawing.Point(7, 68);
             this.radioButtonFemenino.Name = "radioButtonFemenino";
             this.radioButtonFemenino.Size = new System.Drawing.Size(78, 19);
             this.radioButtonFemenino.TabIndex = 1;
@@ -160,7 +155,7 @@ namespace ProyectoPr1.forms
             // radioButtonMasculino
             // 
             this.radioButtonMasculino.AutoSize = true;
-            this.radioButtonMasculino.Location = new System.Drawing.Point(7, 23);
+            this.radioButtonMasculino.Location = new System.Drawing.Point(7, 32);
             this.radioButtonMasculino.Name = "radioButtonMasculino";
             this.radioButtonMasculino.Size = new System.Drawing.Size(80, 19);
             this.radioButtonMasculino.TabIndex = 0;
@@ -168,35 +163,99 @@ namespace ProyectoPr1.forms
             this.radioButtonMasculino.Text = "Masculino";
             this.radioButtonMasculino.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // labelID
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(201, 183);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(71, 23);
-            this.numericUpDown1.TabIndex = 11;
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(27, 26);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(65, 15);
+            this.labelID.TabIndex = 0;
+            this.labelID.Text = "Número ID";
+            this.labelID.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(119, 23);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(187, 23);
+            this.textBoxID.TabIndex = 6;
+            this.textBoxID.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(191, 179);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(60, 15);
+            this.labelUsername.TabIndex = 11;
+            this.labelUsername.Text = "Username";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(156, 199);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(136, 23);
+            this.textBoxUsername.TabIndex = 12;
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(191, 230);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(57, 15);
+            this.labelPassword.TabIndex = 11;
+            this.labelPassword.Text = "Password";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Location = new System.Drawing.Point(156, 250);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(136, 23);
+            this.textBoxPassword.TabIndex = 12;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(34, 292);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(108, 15);
+            this.labelEmail.TabIndex = 13;
+            this.labelEmail.Text = "Correo Electrónico:";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(35, 321);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(256, 23);
+            this.textBoxEmail.TabIndex = 14;
             // 
             // IngresarEmpleadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 314);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(318, 430);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.groupBoxGenero);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelPermanencia);
+            this.Controls.Add(this.textBoxEdad);
+            this.Controls.Add(this.textBoxCargo);
+            this.Controls.Add(this.textBoxApellido);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.labelCargo);
             this.Controls.Add(this.labelEdad);
             this.Controls.Add(this.labelApellido);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelID);
             this.Controls.Add(this.labelNombre);
             this.Name = "IngresarEmpleadoForm";
             this.Text = "Ingresar Empleado";
             this.groupBoxGenero.ResumeLayout(false);
             this.groupBoxGenero.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,14 +268,20 @@ namespace ProyectoPr1.forms
         private System.Windows.Forms.Label labelApellido;
         private System.Windows.Forms.Label labelEdad;
         private System.Windows.Forms.Label labelCargo;
-        private System.Windows.Forms.Label labelPermanencia;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxApellido;
+        private System.Windows.Forms.TextBox textBoxCargo;
+        private System.Windows.Forms.TextBox textBoxEdad;
         private System.Windows.Forms.GroupBox groupBoxGenero;
         private System.Windows.Forms.RadioButton radioButtonFemenino;
         private System.Windows.Forms.RadioButton radioButtonMasculino;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.TextBox textBoxEmail;
     }
 }
