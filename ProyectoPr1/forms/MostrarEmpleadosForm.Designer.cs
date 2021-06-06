@@ -45,10 +45,11 @@ namespace ProyectoPr1.forms
             this.dgvEmpleados.Location = new System.Drawing.Point(0, 24);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.RowTemplate.Height = 25;
-            this.dgvEmpleados.Size = new System.Drawing.Size(800, 426);
+            this.dgvEmpleados.Size = new System.Drawing.Size(800, 426); 
             this.dgvEmpleados.TabIndex = 0;
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvEmpleados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellValueChanged);
+            this.dgvEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // menuStrip1
             // 

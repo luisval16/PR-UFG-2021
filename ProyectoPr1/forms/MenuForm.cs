@@ -59,9 +59,12 @@ namespace ProyectoPr1.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            IngresarEmpleadoForm ingresarEmpleadoForm = new IngresarEmpleadoForm(this) {  TopLevel = false, TopMost = true};
-            this.pContainer.Controls.Add(ingresarEmpleadoForm);
-            ingresarEmpleadoForm.Show();
+            if ((Application.OpenForms["IngresarEmpleadoForm"] as IngresarEmpleadoForm) == null)
+            {
+                IngresarEmpleadoForm ingresarEmpleadoForm = new IngresarEmpleadoForm(this) { TopLevel = false, TopMost = true };
+                this.pContainer.Controls.Add(ingresarEmpleadoForm);
+                ingresarEmpleadoForm.Show();
+            }
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -72,9 +75,14 @@ namespace ProyectoPr1.forms
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            MostrarEmpleadosForm mostrarEmpleadosForm = new MostrarEmpleadosForm(this) { TopLevel = false, TopMost = true };
-            this.pContainer.Controls.Add(mostrarEmpleadosForm);
-            mostrarEmpleadosForm.Show();
+            
+
+            if((Application.OpenForms["MostrarEmpleadosForm"] as MostrarEmpleadosForm) == null)
+            {
+                MostrarEmpleadosForm mostrarEmpleadosForm = new MostrarEmpleadosForm(this) { TopLevel = false, TopMost = true };
+                this.pContainer.Controls.Add(mostrarEmpleadosForm);
+                mostrarEmpleadosForm.Show();
+            }
         }
 
         private void mainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
