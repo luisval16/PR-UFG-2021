@@ -46,8 +46,7 @@ namespace ProyectoPr1.forms
             //una vez asignadas todas las propiedades del nuevo objeto
             //se ingresa toda la información a la tabla con el método addEmpleado
             menuForm.addEmpleado(ex1);
-            //Y al final se limpian todos los campos y la form se deja lista para añadir un nuevo empleado.
-            menuForm.addEmpleado(ex1);
+            //al final se limpian todos los campos y la form se deja lista para añadir un nuevo empleado.
             textBoxID.Clear();
             textBoxNombre.Clear();
             textBoxApellido.Clear();
@@ -56,6 +55,8 @@ namespace ProyectoPr1.forms
             textBoxPassword.Clear();
             textBoxEdad.Clear();
             textBoxCargo.Clear();
+            //mensaje de confirmación
+            MessageBox.Show("Usuario ingresado");
         }
 
         private void label1_Click(object sender, EventArgs e)
