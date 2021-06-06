@@ -105,6 +105,7 @@ namespace ProyectoPr1
             this.pictureBox1.Size = new System.Drawing.Size(227, 64);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginForm
             // 

@@ -120,5 +120,10 @@ namespace ProyectoPr1
             this.txtEmail.Text = "";
             this.txtPassword.Text = "";
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
