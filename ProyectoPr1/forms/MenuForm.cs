@@ -12,7 +12,7 @@ namespace ProyectoPr1.forms
     public partial class MenuForm : Form
     {
 
-
+        //lista para almacenar empleados registrados
         private List<Empleado> empleados = new List<Empleado>();
 
 
@@ -26,6 +26,7 @@ namespace ProyectoPr1.forms
             
         }
 
+        //metodos get y set de encapsulamiento
         public void setEmpleados(List<Empleado> empleados)
         {
             this.empleados = empleados;
@@ -57,6 +58,8 @@ namespace ProyectoPr1.forms
 
         }
 
+
+        //abrir formulario de registro de empleados y asegurarse que no se abran varias instancias de este
         private void button1_Click(object sender, EventArgs e)
         {
             if ((Application.OpenForms["IngresarEmpleadoForm"] as IngresarEmpleadoForm) == null)
@@ -67,11 +70,14 @@ namespace ProyectoPr1.forms
             }
         }
 
+        //metodo para cerrar sesion y regresar al login
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
             DialogResult =  DialogResult.No;
         }
+
+        //abrir formulario de listado y edicion de empleados y asegurarse que no se abran varias instancias de este
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
