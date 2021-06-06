@@ -18,6 +18,7 @@ namespace ProyectoPr1.forms
         {
             InitializeComponent();
             this.menuForm = menuForm;
+            this.textBoxID.Text = this.getLastId();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +33,18 @@ namespace ProyectoPr1.forms
             ex1.Username = textBoxUsername.Text;
             ex1.Email = textBoxEmail.Text;
             ex1.Password = textBoxPassword.Text;
-            ex1.Edad = int.Parse(textBoxEdad.Text);
+
+            try
+            {
+                ex1.Edad = int.Parse(textBoxEdad.Text);
+            }
+            catch (Exception)
+            {
+
+                ex1.Edad = 0;
+            }
+
+            
             //Para el caso del radio button se asigna la propedad Genero con un condicional if
             if (radioButtonMasculino.Checked == true)
             {
@@ -55,8 +67,17 @@ namespace ProyectoPr1.forms
             textBoxPassword.Clear();
             textBoxEdad.Clear();
             textBoxCargo.Clear();
-            //mensaje de confirmación
-            MessageBox.Show("Usuario ingresado");
+            //Manejo de fin de formulario
+            DialogResult dialogResult = MessageBox.Show("Empleado ingresado exitosamente! \n Desea agregar otro empleado?","Resultado",MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.textBoxID.Text = this.getLastId();
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -87,6 +108,24 @@ namespace ProyectoPr1.forms
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        //Metodo para obtener el siguiente Id en la lista
+        private String getLastId()
+        {
+            String nextId = "0";
+            int size = this.menuForm.getEmpleados().Count;
+            String lastId = this.menuForm.getEmpleados()[size - 1].Id;
+            try
+            {
+                nextId = (int.Parse(lastId)+1).ToString();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+
+            return nextId;
         }
     }
 }

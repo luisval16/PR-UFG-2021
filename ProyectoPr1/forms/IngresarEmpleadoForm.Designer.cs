@@ -148,13 +148,13 @@ namespace ProyectoPr1.forms
             this.radioButtonFemenino.Name = "radioButtonFemenino";
             this.radioButtonFemenino.Size = new System.Drawing.Size(78, 19);
             this.radioButtonFemenino.TabIndex = 1;
-            this.radioButtonFemenino.TabStop = true;
             this.radioButtonFemenino.Text = "Femenino";
             this.radioButtonFemenino.UseVisualStyleBackColor = true;
             // 
             // radioButtonMasculino
             // 
             this.radioButtonMasculino.AutoSize = true;
+            this.radioButtonMasculino.Checked = true;
             this.radioButtonMasculino.Location = new System.Drawing.Point(7, 32);
             this.radioButtonMasculino.Name = "radioButtonMasculino";
             this.radioButtonMasculino.Size = new System.Drawing.Size(80, 19);
@@ -177,6 +177,7 @@ namespace ProyectoPr1.forms
             // 
             this.textBoxID.Location = new System.Drawing.Point(119, 23);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(187, 23);
             this.textBoxID.TabIndex = 6;
             this.textBoxID.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
@@ -210,6 +211,7 @@ namespace ProyectoPr1.forms
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(156, 250);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(136, 23);
             this.textBoxPassword.TabIndex = 12;
             // 
