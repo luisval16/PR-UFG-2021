@@ -22,7 +22,7 @@ namespace ProyectoPr1.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            menuForm.setUsername("cambie!!");
+            
             //Al hacer click, se crea un nuevo objejto de la clase Empleado 
             //El objeto toma la información ingresada por el usuario y se guarda en sus propiedades
             Empleado ex1 = new Empleado();
@@ -47,6 +47,7 @@ namespace ProyectoPr1.forms
             //se ingresa toda la información a la tabla con el método addEmpleado
             menuForm.addEmpleado(ex1);
             //Y al final se limpian todos los campos y la form se deja lista para añadir un nuevo empleado.
+            menuForm.addEmpleado(ex1);
             textBoxID.Clear();
             textBoxNombre.Clear();
             textBoxApellido.Clear();
